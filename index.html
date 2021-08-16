@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Let's Enjoy DARTS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/icofont/icofont.min.css" rel="stylesheet">
+  <link href="./assets/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Open Sans", sans-serif;
+      color: #212529;
+    }
+
+    a {
+      color: #eb5d1e;
+    }
+
+    a:hover {
+      color: #ef7f4d;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-primary {
+      font-family: "Raleway", sans-serif;
+    }
+
+    /*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+    .back-to-top {
+      position: fixed;
+      display: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 3px;
+      right: 15px;
+      bottom: 15px;
+      background: #eb5d1e;
+      color: #fff;
+      transition: display 0.5s ease-in-out;
+      z-index: 99999;
+    }
+
+    .back-to-top i {
+      font-size: 24px;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+
+    .back-to-top:hover {
+      color: #fff;
+      background: #ee7843;
+      transition: background 0.2s ease-in-out;
+    }
+
+    /*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+    @media screen and (max-width: 768px) {
+      [data-aos-delay] {
+        transition-delay: 0 !important;
+      }
+    }
+
+    /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+    #header {
+      height: 52px;
+      transition: all 0.5s;
+      z-index: 997;
+      transition: all 0.5s;
+      padding: 5px 0;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #main {
+      margin-top: 72px;
+    }
+
+    /*--------------------------------------------------------------
+# Nav Menu
+--------------------------------------------------------------*/
+    /* Desktop Nav */
+    .nav-menu,
+    .nav-menu * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-menu>ul>li {
+      position: relative;
+      white-space: nowrap;
+      float: left;
+    }
+
+    .nav-menu a {
+      display: block;
+      position: relative;
+      color: #4e4039;
+      padding: 10px 15px;
+      transition: 0.3s;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu .active>a,
+    .nav-menu li:hover>a {
+      color: #eb5d1e;
+      text-decoration: none;
+    }
+
+    .nav-menu .get-started a {
+      background: #eb5d1e;
+      color: #fff;
+      border-radius: 50px;
+      margin: 0 15px;
+      padding: 5px 15px;
+    }
+
+    .nav-menu .get-started a:hover {
+      background: #ee7843;
+      color: #fff;
+    }
+
+    /* Mobile Navigation */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      z-index: 9999;
+      overflow-y: auto;
+      left: -260px;
+      width: 260px;
+      padding-top: 18px;
+      background: #264653;
+      transition: 0.4s;
+    }
+
+    .mobile-nav * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .mobile-nav a {
+      display: block;
+      position: relative;
+      color: #fff;
+      padding: 10px 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .mobile-nav a:hover,
+    .mobile-nav .active>a,
+    .mobile-nav li:hover>a {
+      color: #f39e7a;
+      text-decoration: none;
+    }
+
+    .mobile-nav .get-started a {
+      background: #eb5d1e;
+      color: #fff;
+      border-radius: 50px;
+      margin: 15px;
+      padding: 10px 25px;
+    }
+
+    .mobile-nav .get-started a:hover {
+      background: #ee7843;
+      color: #fff;
+    }
+
+    .mobile-nav-toggle {
+      position: fixed;
+      right: 15px;
+      top: 22px;
+      z-index: 9998;
+      border: 0;
+      background: none;
+      font-size: 24px;
+      transition: all 0.2s;
+      outline: none !important;
+      line-height: 1;
+      cursor: pointer;
+      text-align: right;
+    }
+
+    .mobile-nav-toggle i {
+      color: #4b6f7e;
+    }
+
+    .mobile-nav-overly {
+      width: 100%;
+      height: 100%;
+      z-index: 9997;
+      top: 0;
+      left: 0;
+      position: fixed;
+      background: rgba(255, 255, 255, 0.6);
+      overflow: hidden;
+      display: none;
+    }
+
+    .mobile-nav-active {
+      overflow: hidden;
+    }
+
+    .mobile-nav-active .mobile-nav {
+      left: 0;
+    }
+
+    .mobile-nav-active .mobile-nav-toggle i {
+      color: #fff;
+    }
+
+    /*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+    #hero {
+      width: 100%;
+      height: 70vh;
+      background: #264653;
+      border-bottom: 2px solid #fcebe3;
+      margin: 72px 0 -72px 0;
+    }
+
+    #hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 56px;
+      color: #78d400;
+    }
+
+    #hero h2 {
+      color: #ffffff;
+      margin-bottom: 50px;
+      font-size: 24px;
+    }
+
+    #hero .btn-get-started {
+      font-family: "Raleway", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      display: inline-block;
+      padding: 8px 28px;
+      border-radius: 3px;
+      transition: 0.5s;
+      margin: 10px;
+      color: #fff;
+      background: #eb5d1e;
+    }
+
+    #hero .btn-get-started:hover {
+      background: #ef7f4d;
+    }
+
+    @media (min-width: 1024px) {
+      #hero {
+        background-attachment: fixed;
+      }
+    }
+
+    @media (max-width: 991px) {
+      #hero {
+        height: calc(100vh - 72px);
+      }
+
+      #hero .animated {
+        -webkit-animation: none;
+        animation: none;
+      }
+
+      #hero .hero-img {
+        text-align: center;
+      }
+
+      #hero .hero-img img {
+        width: 50%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      #hero h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+      }
+
+      #hero .hero-img img {
+        width: 70%;
+      }
+    }
+
+    @media (max-width: 575px) {
+      #hero .hero-img img {
+        width: 80%;
+      }
+    }
+
+    @-webkit-keyframes up-down {
+      0% {
+        transform: translateY(10px);
+      }
+
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes up-down {
+      0% {
+        transform: translateY(10px);
+      }
+
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    /*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+    section {
+      padding: 60px 0;
+    }
+
+    .section-bg {
+      background-color: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 24px;
+      font-weight: 700;
+      padding-bottom: 0;
+      line-height: 1px;
+      margin-bottom: 15px;
+      color: #78d400;
+    }
+
+    .section-title p {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      position: relative;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .section-title p::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #eb5d1e;
+      bottom: 0;
+      left: calc(50% - 30px);
+    }
+
+    /*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+    .about h3 {
+      font-weight: 700;
+      font-size: 34px;
+      color: #4e4039;
+    }
+
+    .about h4 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 5px;
+      color: #7a6960;
+    }
+
+    .about i {
+      font-size: 48px;
+      margin-top: 15px;
+      color: #f39e7a;
+    }
+
+    .about p {
+      font-size: 15px;
+      color: #5a6570;
+    }
+
+    @media (max-width: 991px) {
+      .about .about-img img {
+        max-width: 70%;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .about .about-img img {
+        max-width: 90%;
+      }
+    }
+
+    /*--------------------------------------------------------------
+# methods
+--------------------------------------------------------------*/
+    .method {
+      background-color: #264653;
+    }
+
+    #htmp {
+      color: #ffffff;
+    }
+
+    .method .methodPic-box {
+      padding: 30px;
+      position: relative;
+      overflow: hidden;
+      margin: 0 0 40px 0;
+      background: #fff;
+      box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+      transition: all 0.3s ease-in-out;
+      border-radius: 15px;
+      text-align: left;
+      border-bottom: 3px solid #fff;
+    }
+
+    .method .methodPic-box:hover {
+      transform: translateY(-15px);
+      border-color: #000000;
+    }
+
+    .method .title {
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .method .description {
+      font-size: 15px;
+      line-height: 28px;
+      margin-bottom: 0;
+    }
+
+    /*--------------------------------------------------------------
+# games
+--------------------------------------------------------------*/
+    .games {
+      background-color: #ffffff;
+    }
+
+
+    .games .games-item {
+      margin-bottom: 20px;
+
+    }
+
+    .games .games-wrap {
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      z-index: 1;
+    }
+
+    .games .games-wrap::before {
+      content: "";
+      background: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      left: 100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all ease-in-out 0.3s;
+      z-index: 2;
+    }
+
+    .games .games-wrap img {
+      transition: 0.3s;
+      position: relative;
+      z-index: 1;
+    }
+
+    .games .games-wrap .games-info {
+      opacity: 0;
+      position: absolute;
+      /* bottom: -20px; */
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .games .games-wrap .games-info p {
+      color: #ffffff;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: left;
+      padding: 0 12px;
+    }
+
+    .games .games-wrap:hover::before {
+      left: 0;
+    }
+
+    .games .games-wrap:hover .games-links {
+      opacity: 1;
+      top: calc(50% - 16px);
+    }
+
+    .games .games-wrap:hover .games-info {
+      opacity: 1;
+      bottom: 0;
+    }
+
+    /*--------------------------------------------------------------
+# count
+--------------------------------------------------------------*/
+    .count {
+      background-color: #264653;
+    }
+
+    .sdth {
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .sin p {
+      margin: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #fff;
+      cursor: pointer;
+
+    }
+
+    .sin p:hover {
+      margin: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: rgb(250, 250, 0);
+      cursor: pointer;
+    }
+
+    .db p {
+      margin: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .db p:hover {
+      color: rgb(250, 250, 0);
+      margin: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      cursor: pointer;
+    }
+
+    .tri p {
+      margin: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .tri p:hover {
+      margin: 10px;
+      font-family: 'Noto Sans TC', sans-serif;
+      color: rgb(250, 250, 0);
+      cursor: pointer;
+    }
+
+    .heart p {
+      font-family: 'Noto Sans TC', sans-serif;
+      color: #fff;
+      cursor: pointer;
+      margin: 10px;
+
+    }
+
+    .heart p:hover {
+      font-family: 'Noto Sans TC', sans-serif;
+      color: rgb(250, 250, 0);
+      cursor: pointer;
+
+    }
+
+    .why {
+      text-align: center;
+    }
+
+    .cimg {
+      max-width: 100%;
+      height: auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .cimgsin {
+
+      display: block;
+      /* transform: translate(70%, -95%); */
+      width: 40vw;
+    }
+
+    .cimgdb {
+
+      display: block;
+      /* transform: translate(70%, -95%); */
+      width: 40vw;
+    }
+
+    .cimgtri {
+
+      display: block;
+      /* transform: translate(70%, -95%); */
+      width: 40vw;
+    }
+
+    .cimgheart {
+
+      display: block;
+      /* transform: translate(70%, -95%); */
+      width: 40vw;
+    }
+
+    .cm {}
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><span></span></a></h1>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#count">Dart Scoring Rules</a></li>
+          <li><a href="#method">How to play</a></li>
+          <li><a href="#games">Game Rules</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1">
+          <h1>Let's Enjoy DARTS</h1>
+          <h2>飛鏢新手指南</h2>
+          <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="./img/main.gif" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
+            <img src="./img/anastase-maragos-X4zx5Vc_LZU-unsplash.jpg" class="img-fluid" alt="" data-aos="zoom-in">
+          </div>
+          <div class="col-lg-6 pt-5 pt-lg-0">
+            <h3 data-aos="fade-up" class="mb-3" style="text-align: center;">History</h3>
+            <div class="row">
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="text-align: center;"><img src="./img/romanwarrior_副本.png" alt="" style="width: 80px;">羅馬起源
+                </h4>
+                <p>飛鏢運動的歷史最早追溯到羅馬帝國時代。帝國軍團駐守不列顛島時，當地多雨的天氣限制了士兵們們的戶外活動，於是有人發明一種遊戲，在室內用手將箭投向用柞樹橫切面製成的靶子，形成飛鏢運動最早的雛型。
+                </p>
+              </div>
+              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <h4 style="text-align: center;"><img src="./img/hairstyles-33220_1280_副本.png" alt=""
+                    style="width: 40px;"> 英國起源</h4>
+                <p>
+                  19世紀末期，英國人貝利恩發明了現代飛鏢運動的計分系統。1970年代初期，飛鏢運動傳遍整個歐洲大陸，並成立世界飛鏢聯合會。由於許多酒吧會設置飛鏢設備，提供酒客作為餘興節目，因此每年舉辦的世界飛鏢錦標賽和諸多其他比賽，大多由啤酒公司贊助。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= How to count Section ======= -->
+    <section id="count" class="count section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Question 1</h2>
+          <p>如何計算飛鏢靶上的分數?</p>
+        </div>
+
+        <div class="" data-aos="fade-up">
+          <div class="row sdth">
+            <div id="sin" class="sin">
+              <p class="sdth">單倍區</p>
+            </div>
+            <div id="db" class="db">
+              <p class="sdth">雙倍區</p>
+            </div>
+            <div id="tri" class="tri">
+              <p class="sdth">三倍區</p>
+            </div>
+            <div id="heart" class="heart">
+              <p class="sdth">紅心區</p>
+            </div>
+          </div>
+        </div>
+        <div id="cimgWRap" data-aos="fade-up">
+          <div class="why">
+            <img class="cimg" id="cimg" src="./img/main_img.png" alt="">
+          </div>
+        </div>
+
+      </div>
+      <div class="test" id="test" style="display: none;">
+        <img id="cimgsin" class="cimgsin" src="./img/cimg_單倍區.png" alt="" style="display: none;">
+        <img id="cimgdb" class="cimgdb" src="./img/cimg_兩倍區.png" alt="" style="display: none;">
+        <img id="cimgtri" class="cimgtri" src="./img/cimg_三倍區.png" alt="" style="display: none;">
+        <img id="cimgheart" class="cimgheart" src="./img/cimg_紅心.png" alt="" style="display: none;">
+      </div>
+      </div>
+
+    </section><!-- End count Section -->
+
+    <!-- ======= method Section ======= -->
+    <section id="method" class="method section-bg">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Question 2</h2>
+          <p id="htmp">怎麼拿?</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch " data-aos="zoom-in" data-aos-delay="100">
+            <div class="methodPic-box">
+              <div class="methodPic">
+                <img src="./img/握標方法(1).png" alt="">
+              </div>
+              <h4 class="title">1.將飛鏢放在食指,尋找平衡點</h4>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="methodPic-box">
+              <div class="methodPic"><img src="./img/握標方法(2).png" alt=""></div>
+              <h4 class="title">2.以拇指從上方輔助</h4>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+            <div class="methodPic-box">
+              <div class="methodPic"><img src="./img/握標方法(3).png" alt=""></div>
+              <h4 class="title">3.再以中指稍加支撐即可</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Question 3</h2>
+            <p id="htmp">怎麼站?</p>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+              <div class="methodPic-box">
+                <div class="methodPic">
+                  <img src="./img/站立姿勢(4).png" alt="" style="width: 100%;">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+              <div class="methodPic-box">
+                <div class="methodPic">
+                  <img src="./img/站立姿勢(5).png" alt="" style="width: 100%;">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+
+            <div class="section-title" data-aos="fade-up">
+              <h2>Question 4</h2>
+              <p id="htmp">怎麼投擲?</p>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                <div class="methodPic-box">
+                  <div class="methodPic">
+                    <img src="./img/擲標姿勢1.png" alt="">
+                  </div>
+                  <h4 class="title mt-5">1. 架鏢</h4>
+                  <p>正面朝向鏢靶，雙眼瞄準目標。試著讓你的"目標"、"飛鏢"及"眼睛"成一直線。
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                <div class="methodPic-box">
+                  <div class="methodPic"><img src="./img/擲標姿勢2.png" alt=""></div>
+                  <h4 class="title mt-5">2. 拉鏢</h4>
+                  <p>將飛鏢拉回動作：以手肘為中心將前臂往後拉，如畫扇形般地往前投擲。只要讓手心自然朝上，手腕即可呈現放鬆狀態！</p>
+
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                <div class="methodPic-box">
+                  <div class="methodPic "><img src="./img/擲標姿勢3.png" alt=""></div>
+                  <h4 class="title mt-5">3. 放鏢</h4>
+                  <p>投擲並放開飛鏢的動作：以擲出紙飛機般的力道投擲，且須同時鬆開所有手指。若太晚鬆手將導致飛鏢無法穩定飛行。</p>
+
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                <div class="methodPic-box">
+                  <div class="methodPic mt-5"><img src="./img/擲標姿勢4.png" alt=""></div>
+                  <h4 class="title">4. 順勢動作</h4>
+                  <p>放鏢後順勢伸直前臂的動作：想像將手往瞄準的方向延伸。</p>
+
+                </div>
+              </div>
+            </div>
+          </div>
+    </section><!-- End method Section -->
+
+    <!-- ======= games Section ======= -->
+    <section id="games" class="games">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>遊戲種類與玩法</h2>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="">
+          </div>
+        </div>
+
+        <div class="row games-container" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4 col-md-6 games-item">
+            <div class="games-wrap">
+
+              <img src="./img/rule_of_01.png" class="img-fluid" alt="" style="width: 50%">
+
+              <div class="games-info text-center">
+                <p>基本分數依遊戲種類而異，例如「301」的基本分數即為301。遊戲玩法由基本分數開始倒扣玩家所射中的得分，將基本分數歸零即可結鏢，最先結鏢的玩家為勝！</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 games-item ">
+            <div class="games-wrap">
+              <img src="./img/rule_of_count-up.png" class="img-fluid" alt="" style="width: 50%">
+              <div class="games-info">
+                <p>COUNT-UP由零開始累積分數。每1回合可投3支鏢，第8回合結束後，由最高分者獲勝。對新手來說，一開始打中狹窄的三倍區很難。比起雙倍區、三倍區，不如瞄準面積較大的紅心打起較有機會獲得高分。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 games-item">
+            <div class="games-wrap">
+              <img src="./img/rule_of_cricket.png" class="img-fluid" alt="" style="width: 50%">
+              <div class="games-info">
+                <p>
+                  CRICKET的有效得分區僅限於15、16、17、18、19、20及紅心。射中同一有效區域3次後，該區域將成為自己的陣地。由「領先狀態下關閉所有陣地者」或「所有回合結束時領先者」為勝。
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End games Section -->
+
+  </main><!-- End #main -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- 如何計算分數 -->
+  <script>
+    $('#sin').click(function () {
+      console.log('hi');
+      $('#cimg').attr('src', './img/cimg_單倍區.png')
+    });
+    $('#db').click(function () {
+      console.log('hi');
+      $('#cimg').attr('src', './img/cimg_兩倍區.png')
+    });
+    $('#tri').click(function () {
+      console.log('hi');
+      $('#cimg').attr('src', './img/cimg_三倍區.png')
+    });
+    $('#heart').click(function () {
+      console.log('hi');
+      $('#cimg').attr('src', './img/cimg_紅心.png');
+    });
+  </script>
+
+</body>
+
+</html>
